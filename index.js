@@ -20,9 +20,9 @@ const taco = createMenuItem("taco", 12, "TexMex");
 const strawberryLemonade = createMenuItem("Strawberry Lemonade", 5, "Drinks");
 const cherryCheesecake = createMenuItem("Cherry Cheesecake", 8, "Desserts");
 
-console.log(taco);
-console.log(strawberryLemonade);
-console.log(cherryCheesecake);
+// console.log(taco);
+// console.log(strawberryLemonade);
+// console.log(cherryCheesecake);
 
 
 /* Task 2: You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to your burger object that automatically calculates price given a string as a parameter. 
@@ -35,7 +35,18 @@ and should return a number.
 
 For example, burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2*/
 
+burger.discount = function(str){
+  if (str === "teacher" || str === "student"){
+    return this.price * 0.75;
+  }else if (str === "public" )
+  return this.price * 0.90;
+}
 
+// console.log(burger.discount("teacher"));
+// console.log(burger.discount("student"));
+// console.log(burger.discount("public"));
+
+// console.log(burger);
 
 ///////////////Reviews (MVP)///////////////////
 
@@ -50,12 +61,17 @@ const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and
 ]
 
 /* Task 3: Console.log just Julius' feedback */
+// console.log(reviews[5].feedback);
 
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
+reviews.push({name: "Gina", rating: 3, feedback: "The service was great, but the food was just average."});
+// console.log(reviews);
 
 
-/* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
+/* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"*/
+reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
+// console.log(reviews);
 
 /*  Task 6: Write a function to return a review based on the index of the review in the array.
 
