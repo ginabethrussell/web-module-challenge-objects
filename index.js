@@ -6,17 +6,12 @@ const breakfastBurrito = {name: "Breakfast Burrito", price: 16, category:"Breakf
 
 /* Task 1a: write a function to return more menu items with the same format as the items above. */
 
-function createMenuItem(name, cost, category){
-  const newMenuItem = {
-    name: name,
-    price: cost,
-    category: category
-  }
-  return newMenuItem;
+function createMenuItem(name, price, category){
+    return {name, price, category};
 }
 
 /* Task 1b: use your function to create 3 more menu items. You may add any items to the menu that you'd like */
-const taco = createMenuItem("taco", 12, "TexMex");
+const taco = createMenuItem("taco", 12, "Dinner");
 const strawberryLemonade = createMenuItem("Strawberry Lemonade", 5, "Drinks");
 const cherryCheesecake = createMenuItem("Cherry Cheesecake", 8, "Desserts");
 
@@ -86,7 +81,7 @@ and should return a string in the format `{name} gave the restaurant a {rating},
  * it will return `Daniela gave the restaurant a 5 star review and their feedback was: Beautiful atmosphere and wonderful vegan options!`
 */
 function getReviewByIndex(arr, index) {
-    return `${arr[index].name} gave the restaurant a ${arr[index].rating}, and their feedback was: ${arr[index].feedback}`;
+    return `${arr[index].name} gave the restaurant a ${arr[index].rating} star review, and their feedback was: ${arr[index].feedback}`;
 }
 
 // console.log(getReviewByIndex(reviews, 0));
@@ -102,7 +97,7 @@ For example, if getLastReview is invoked passing the reviews array it will retur
 */
 function getLastReview(arr) {
   const lastIndex = arr.length - 1;
-  return `${arr[lastIndex].name} gave the restaurant a ${arr[lastIndex].rating}, and their feedback was: ${arr[lastIndex].feedback}`;
+  return `${arr[lastIndex].name} gave the restaurant a ${arr[lastIndex].rating} star review, and their feedback was: ${arr[lastIndex].feedback}`;
 } 
 
 // console.log(getLastReview(reviews));
@@ -132,7 +127,7 @@ function getLastReview(arr) {
     return reviewsByRating;
   }
 
-  // console.log(getReviewByRating(reviews, 4))
+  // console.log(getReviewByRating(reviews, 4));
   
 /** STRETCH 2: Write a function called 'getLongestReview' that returns an array containing all reviews longer than 15 words. 
   
@@ -188,6 +183,8 @@ function carMaker(numMiles) {
     return car;
 }
 const myCar = carMaker(500);
-console.log(myCar);
-myCar.drive(250);
-console.log(myCar);
+// console.log(myCar);
+// myCar.drive(250);
+// console.log(myCar);
+// myCar.drive(500);
+// console.log(myCar.odometer);
