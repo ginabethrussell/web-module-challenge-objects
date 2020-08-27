@@ -33,8 +33,9 @@ For example, burger.discount("teacher") would return 13.5 and burger.discount("p
 burger.discount = function(str){
   if (str === "teacher" || str === "student"){
     return this.price * 0.75;
-  }else if (str === "public" )
-  return this.price * 0.90;
+  }else {
+    return this.price * 0.90;
+  } 
 }
 
 // console.log(burger.discount("teacher"));
@@ -58,6 +59,13 @@ const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and
 /* Task 3: Console.log just Julius' feedback */
 // console.log(reviews[5].feedback);
 
+// for (let i = 0; i < reviews.length; i ++){
+//   if (reviews[i].name === "Julius"){
+//     console.log(reviews[i].feedback);
+//   }
+// }
+
+
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
 // reviews.push({name: "Gina", rating: 3, feedback: "The service was great, but the food was just average."});
@@ -65,7 +73,13 @@ const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and
 
 
 /* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"*/
-reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
+// reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
+
+// for (let i = 0; i< reviews.length; i++){
+//   if (reviews[i].name === "Reyna"){
+//     reviews[i].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
+//   }
+// }
 // console.log(reviews);
 
 /*  Task 6: Write a function to return a review based on the index of the review in the array.
