@@ -80,7 +80,7 @@ const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and
 //     reviews[i].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
 //   }
 // }
-// console.log(reviews);
+console.log(reviews);
 
 /*  Task 6: Write a function to return a review based on the index of the review in the array.
 
@@ -115,6 +115,7 @@ function getLastReview(arr) {
 } 
 
 // console.log(getLastReview(reviews));
+
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
 
